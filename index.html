@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Shopping Cart</title>
+    <script>
+        function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        input.value = value;
+      }
+      
+      function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10);
+        if (value > 1) {
+          value = isNaN(value) ? 0 : value;
+          value--;
+          input.value = value;
+        }
+      }
+      
+    </script>
+
+</head>
+
+<body>
+      <div id="productDetailParent">
+        <div id="left">
+            <img id="choosenPic" src=".vscode\images\pic1.png">
+            
+            <div class="thumbnail">
+                <img id="pic1" class="thumbnail1"  src=".vscode\images\pic1.png">
+                <img id="pic2" class="thumbnail1"  src=".vscode\images\one.png">
+                <img id="pic3" class="thumbnail1"  src=".vscode\images\two.png">
+                <img id="pic4" class="thumbnail1"  src=".vscode\images\three.png"> 
+            </div>
+               
+          
+        </div>
+        <div id="right">
+            <div class="titles">
+                <h4 class="productVendor">Marmeto</h4>
+                <h4 class="productTitle">Embrace Sideboard</h4>
+            </div>
+            
+            <hr>
+            <div class="price">
+                <div class="price-wrapper">
+                    <div class="orPrice">$12999.00</div>
+                    <div class="discount"></div>
+                </div>
+                <div class="line-through">$19999.00</div>
+                
+                <hr>
+                <div class="chooseColor">
+                <label class="colorLabel">Choose a Color <br><br></label>
+                <div class="productsColor">
+                        <button id="Firstsquare" class="button" style="background-color: #ECDECC;" data-color="#ECDECC"></button>
+                        <button id="Secondsquare" class="button" style="background-color: #BBD278;"  data-color="#BBD278"></button>
+                        <button  id="Thirdsquare" class="button" style="background-color: #BBC1F8;" data-color="#BBC1F8"></button>
+                        <button id="Fourthsquare" class="button" style="background-color: #FFD3F8;" data-color="#FFD3F8"></button>
+                </div>
+                </div> 
+                <hr>
+                <div class="chooseSize">
+                    <label class="sizeLabel"> Choose a Size</label>
+                    <div class="productsSize">
+                        <input type="radio" id="Small" name="Size" value="Small">
+                        <label for="Small">Small</label>
+                        <input type="radio" id="Medium" name="Size" value="Medium">
+                        <label for="Medium">Medium</label>
+                        <input type="radio" id="Large" name="Size" value="Large">
+                        <label for="Large">Large</label>
+                        <input type="radio" id="ExtraLarge" name="Size" value="ExtraLarge">
+                        <label for="ExtraLarge">Extra Large</label>
+                        <input type="radio" id="XXL" name="Size" value="XXL">
+                        <label for="XXL">XXL</label>
+                </div>
+            </div> 
+                <hr>
+                <div id="Buttons">
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="1">
+                        <span class="up" onClick='increaseCount(event, this)'>+</span>
+                      </div>
+
+                    <button class="cartButton" id="addToCartBtn">Add To Cart</button>
+                </div>
+                    <div class="onPressCart"></div>
+                <hr>
+                <div class="description">
+                    <p>
+                        The Embrace Sideboard is a stylish wear. With a top cloth designed to provide superior protection
+                         and look great, this storage solution is both functional and attractive. It fits seamlessly 
+                         into any home decor, with clean lines and a timeless look. 
+                        Crafted from premium materials for a combination of style, durability, and reliability.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+    
